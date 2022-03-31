@@ -1,3 +1,14 @@
+/**
+ *  VORLAGE GUI 
+ *  ---------------------------------------------------------------------- 
+ *  Autor: Peter Braunschädel
+ *  Erstellungs-Datum: 28.03.2022
+ *  Version 1.1
+ *  Datum der letzten Änderung: 31.03.2022
+ *  Änderung: Kommentar hinzugefügt
+ *  ----------------------------------------------------------------------
+ */
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
