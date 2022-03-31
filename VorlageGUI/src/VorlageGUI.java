@@ -24,6 +24,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.GridBagLayout;
 import java.awt.Dimension;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class VorlageGUI extends JFrame {
 	private JTextField textBungalowNr;
@@ -54,6 +56,7 @@ public class VorlageGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public VorlageGUI() {
+		setAutoRequestFocus(false);
 		setPreferredSize(new Dimension(800, 400));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -73,7 +76,7 @@ public class VorlageGUI extends JFrame {
 		getContentPane().add(btnReservierungDurchfuehren);
 		
 		JButton btnNewButton_2 = new JButton("EXIT");
-		btnNewButton_2.setBounds(601, 250, 123, 60);
+		btnNewButton_2.setBounds(578, 332, 123, 60);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
@@ -119,7 +122,22 @@ public class VorlageGUI extends JFrame {
 		
 		textRueckmeldung = new JTextField();
 		textRueckmeldung.setColumns(10);
-		textRueckmeldung.setBounds(284, 250, 200, 60);
+		textRueckmeldung.setBounds(27, 332, 200, 40);
 		getContentPane().add(textRueckmeldung);
+		
+		JLabel lblAuswahlBungalowAnzeige = new JLabel("Bungalow ausw\u00E4hlen:");
+		lblAuswahlBungalowAnzeige.setBounds(425, 21, 120, 40);
+		getContentPane().add(lblAuswahlBungalowAnzeige);
+		
+		JComboBox comboAuswahlBungalow = new JComboBox();
+		comboAuswahlBungalow.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}));
+		comboAuswahlBungalow.setMaximumRowCount(10);
+		comboAuswahlBungalow.setBounds(580, 26, 45, 30);
+		getContentPane().add(comboAuswahlBungalow);
+		
+		JTextField textBuchungenAnzeigen = new JTextField();
+		textBuchungenAnzeigen.setColumns(10);
+		textBuchungenAnzeigen.setBounds(425, 72, 200, 200);
+		getContentPane().add(textBuchungenAnzeigen);
 	}
 }
